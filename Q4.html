@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- Q4. create "+" and "-" buttons to increase or decrease a number on the page . Save the updated number in localStorage so it stays the same after refresh -->
+<body>
+    
+    <h1 id="number">0</h1>
+    <button id="decrease">-</button>
+    <button id="increase">+</button>
+
+    <script>
+        let numberElement = document.getElementById('number');
+        let decreaseButton = document.getElementById('decrease');
+        let increaseButton = document.getElementById('increase');
+        let number = localStorage.getItem('number') ? parseInt(localStorage.getItem('number')) : 0;
+        numberElement.textContent = number;
+        decreaseButton.addEventListener('click', () => {
+            number--;
+            numberElement.textContent = number;
+            localStorage.setItem('number', number);
+        });
+        increaseButton.addEventListener('click', () => {
+            number++;
+            numberElement.textContent = number;
+            localStorage.setItem('number', number);
+        });
+    </script>
+</body>
+</html>

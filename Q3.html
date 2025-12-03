@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show/hide</title>
+</head>
+    <!-- Q3 Create a box with padding, margin, border, anda fixed width. Hide the box on screens below 50px and show it above 500px -->
+<style>
+    .box{
+        border:1px solid red;
+        width:200px;
+        height:200px;
+        margin:20px;
+        padding:20px;
+        background-color: rgb(109, 218, 254);
+    }
+    @media all and (max-width:500px){
+        .box{
+            display:none;
+        }
+    }
+    @media all and (min-width:501px){
+        .box{
+            display:block;
+        }
+    }
+    </style>
+<body>
+</body>
+<div class="box"></div>
+</html>
